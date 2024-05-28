@@ -1,0 +1,24 @@
+1.Write a Program to Reverse the given String in 3 ways.
+
+2. Program to Reverse Order of Words
+ EX: Input: Learning Python is very Easy
+     Output: Easy Very is Python Learning
+
+3. Program to Reverse Internal Content of each Word
+ EX: Input: Sai Software Solutions
+     Output: iaS erawtfoS snoituloS
+
+4. Write a Program to Print Characters at Odd Position and Even Position for 
+   the given String?
+
+5. Program to Merge Characters of 2 Strings into a Single String by taking 
+   Characters alternatively
+   Input: s1 = "ravi"
+          s2 = "reja"
+
+
+6. Write a Program to Sort the Characters of the String and First Alphabet 
+   Symbols followed by Numeric Values
+   Input: B4A1D3
+   Output: ABD134
+

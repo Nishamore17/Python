@@ -1,0 +1,30 @@
+Lambda Function:
+We can define by using lambda keyword lambda n:n*n
+Syntax of lambda Function: lambda argument_list : expression
+Note: By using Lambda Functions we can write very concise code so that readability of the program will be improved.
+
+Q)Write a Program to create a Lambda Function to find Square of
+given Number?
+1) s=lambda n:n*n
+2) print("The Square of 4 is :",s(4))
+3) print("The Square of 5 is :",s(5))
+Output
+The Square of 4 is : 16
+The Square of 5 is : 25
+Q) Lambda Function to find Sum of 2 given Numbers
+1) s=lambda a,b:a+b
+2) print("The Sum of 10,20 is:",s(10,20))
+3) print("The Sum of 100,200 is:",s(100,200))
+Output
+The Sum of 10,20 is: 30
+The Sum of 100,200 is: 300
+Q) Lambda Function to find biggest of given Values
+1) s=lambda a,b:a if a>b else b
+2) print("The Biggest of 10,20 is:",s(10,20))
+3) print("The Biggest of 100,200 is:",s(100,200))
+Output
+The Biggest of 10,20 is: 20
+The Biggest of 100,200 is: 200
+Note: Lambda Function internally returns expression value and we are not required to write return statement explicitly.
+Note: Sometimes we can pass function as argument to another function. In such cases lambda functions are best choice.
+We can use lambda functions very commonly with filter(), map() and reduce() functions, because these functions expect function as argument.

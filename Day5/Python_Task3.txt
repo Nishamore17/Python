@@ -1,0 +1,29 @@
+PYTHON TASKS
+1. Write a Program for the following Requirement
+Input: a4b3c2
+Output: aaaabbbcc
+
+
+2. Write a Program to Remove Duplicate Characters from the given Input String?
+Input: ABCDABBCDABBBCCCDDEEEF
+Output: ABCDEF
+
+3. Write a Program to find the Number of Occurrences of each Character present in the given String?
+Input: ABCABCABBCDE
+Output: A-3,B-4,C-3,D-1,E-1
+
+4. Write a Program to perform the following Task?
+Input: 'one two three four five six seven'
+Output: 'one owt three ruof five xis seven'
+
+5. Write a Program to display Unique Vowels present in the given Word?
+
+6. Write a Program to take Dictionary from the Keyboard and print the Sum of Values?
+
+7. Write a Program to find Number of Occurrences of each Letter present in the given String?
+
+8. Write a Program to find Number of Occurrences of each Vowel present in the given String?
+
+9. Write a Program to accept Student Name and Marks from the Keyboard and creates a Dictionary. Also display Student Marks by taking Student Name as Input?
+
+10. Write a Program to print table of any number till 20, accepting number at run time.

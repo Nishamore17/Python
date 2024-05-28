@@ -1,0 +1,166 @@
+Pickle files --> Python specfic serialization
+
+people = open('/root/people.txt','r')
+
+The allowed modes in Python are
+1) r  open an existing file for read operation. The file pointer is positioned at the beginning of the file.If the specified file does not exist then we will get FileNotFoundError.This is default mode.
+
+2) w  open an existing file for write operation. If the file already contains some data then it will be overridden. If the specified file is not already available then this mode will create that file.
+
+3) a open an existing file for append operation. It won't override existing data.If the specified file is not already avaialble then this mode will create a new file.
+
+4) r+ To read and write data into the file. The previous data in the file will not be deleted.The file pointer is placed at the beginning of the file.
+
+5) w+ To write and read data. It will override existing data.
+6) a+ To append and read data from the file.It wont override existing data.
+7) x  To open a file in exclusive creation mode for write operation. If the file already exists then we will get FileExistsError.
+
+Note: All the above modes are applicable for text files. If the above modes suffixed with 'b' then these represents for binary files.
+Eg: rb,wb,ab,r+b,w+b,a+b,xb
+
+Various Properties of File Object:
+Once we opend a file and we got file object, we can get various details related to that file by using its properties.
+name Name of opened file
+mode Mode in which the file is opened
+closed Returns boolean value indicates that file is closed or not
+readable() Retruns boolean value indicates that whether file is readable or not
+writable() Returns boolean value indicates that whether file is writable or not.
+1) =open("abc.txt",'w')
+print("File Name: ",people.name)
+print("File Mode: ",people.mode)
+print("Is File Readable: ",people.readable())
+print("Is File Writable: ",people.writable())
+print("Is File Closed : ",people.closed)
+people.close()
+print("Is File Closed : ",people.closed)
+
+for line in people:
+  print(line)
+people.close()
+
+for line in people:
+  print(line,end='')
+people.close()
+
+or
+
+for line in people:
+  print(line.strip())
+people.close()
+
+for line in people:
+  print(line,end='')
+  print(len(line))
+people.close()
+
+for line in people:
+  print(line.strip(),end='')
+people.close()
+
+The with Context manager
+Opening using "with" makes the file readable as an object and no need to close the file, as it is interpreted as python object data.
+
+with open('people.txt' ,'r') as people:
+  for line in people:  
+    print(line.strip())
+
+READING DATA
+
+with open('people.txt' ,'r') as people:
+  lines=people.readlines()
+
+print(lines)
+print(lines[-1:]) --> Get the last line.
+
+
+for line in reversed(lines):
+  print(line,end='')
+
+readlines is good for small files because it has to fit the whole data in memory.
+
+USING READ
+with open('people.txt') as people:
+  text=people.read()
+
+print(text)
+
+It takes as strings instead of lines.
+
+for line in reversed(text):
+  print(line,end='')
+
+will reverse the string of every word in the sentence.
+
+READLINE/BREEAK
+
+with open('people.txt') as people:
+  while True:
+    line = people.readline().strip()
+    print(line)
+    if 'Lovelace' in line.casefold():
+      break
+
+
+Writing Data to Text Files:
+We can write character data to the text files by using the following 2 methods.
+1) write(str)
+2) writelines(list of lines)
+1) f=open("abcd.txt",'w')
+2) f.write("Durga\n")
+3) f.write("Software\n")
+4) f.write("Solutions\n")
+5) print("Data written to the file successfully")
+6) f.close()
+abcd.txt:
+Durga
+Software
+Solutions
+Note: In the above program, data present in the file will be overridden everytime if we
+run the program. Instead of overriding if we want append operation then we should open
+the file as follows.
+f = open("abcd.txt","a")
+Eg 2:
+1) f=open("abcd.txt",'w')
+2) list=["sunny\n","bunny\n","vinny\n","chinny"]
+3) f.writelines(list)
+4) print("List of lines written to the file successfully")
+5) f.close()
+abcd.txt:
+sunny
+bunny
+vinny
+chinny
+Note: While writing data by using write() methods, compulsory we have to provide line
+seperator(\n), otherwise total data should be written to a single line.
+
+How to check a particular File exists OR not?
+We can use os library to get information about files in our computer.
+os module has path sub module,which contains isFile() function to check whether a
+particular file exists or not?
+os.path.isfile(fname)
+Q) Write a Program to check whether the given File exists OR not. If it is
+available then print its content?
+1) import os,sys
+2) fname=input("Enter File Name: ")
+3) if os.path.isfile(fname):
+4) print("File exists:",fname)
+5) f=open(fname,"r")
+6) else:
+7) print("File does not exist:",fname)
+8) sys.exit(0)
+9) print("The content of file is:")
+10) data=f.read()
+11) print(data)
+
+
+
+
+
+
+
+
+
+
+
+
+

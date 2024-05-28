@@ -1,0 +1,53 @@
+1. Write a Function to check whether the given Number is Even OR Odd?
+
+2. Write a Function to reverse a given string?
+
+3. Create a Function called calc() which takes 2 numbers as input and prints
+   addition, substraction, multiplication and division.
+
+4. Create a function to accept name,age and return whether person is eligible 
+   to vote or not?
+
+5. Write a Python Function to find how many vowels are present in a provided 
+   string.
+6. Explain the below code:
+1) a=10
+2) def f1():
+3) a=777
+4) print(a)
+5) def f2():
+6) print(a)
+7) f1()
+8) f2()
+
+Anonymous Functions:
+Sometimes we can declare a function without any name,such type of nameless
+functions are called anonymous functions or lambda functions.
+
+The main purpose of anonymous function is just for instant use(i.e for one time usage)
+
+Lambda Function:
+We can define by using lambda keyword lambda n:n*n
+Syntax of lambda Function: lambda argument_list : expression
+Note: By using Lambda Functions we can write very concise code so that readability of the program will be improved.
+
+ex:
+Write a Program to create a Lambda Function to find Square of given Number?
+1) s=lambda n:n*n
+2) print("The Square of 4 is :",s(4))
+3) print("The Square of 5 is :",s(5))
+
+TASK: CREATE Anonymous Functions FOR THE FOLLOWING
+
+1. Lambda Function to find Sum of 2 given Numbers
+2. Lambda Function to find biggest of given Values
+3. Write a program to filter only Even Numbers from the List.
+4. Write a program to find highest of any 3 numbers.
+
+
+
+
+
+
+
+

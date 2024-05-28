@@ -1,0 +1,90 @@
+What is Class:
+⚽ In Python every thing is an object. To create objects we required some Model or Plan or Blue print, which is nothing but class.
+⚽ We can write a class to represent properties (attributes) and actions (behaviour) of object.
+⚽ Properties can be represented by variables
+⚽ Actions can be represented by Methods.
+⚽ Hence class contains both variables and methods.
+
+How to define a Class?
+We can define a class by using class keyword.
+Syntax:
+class className:
+''' documenttation string '''
+variables:instance variables,static and local variables
+methods: instance methods,static methods,class methods
+Documentation string represents description of the class. Within the class doc string is
+always optional. We can get doc string by using the following 2 ways.
+1) print(classname.__doc__)
+2) help(classname)
+Example:
+1) class Student:
+2) ''''' This is student class with required data'''
+3) print(Student.__doc__)
+4) help(Student)
+Within the Python class we can represent data by using variables.
+There are 3 types of variables are allowed.
+1) Instance Variables (Object Level Variables)
+2) Static Variables (Class Level Variables)
+3) Local variables (Method Level Variables)
+
+class mypyclass:
+   """This is my own class creation"""
+print(mypyclass.__doc__)
+help(mypyclass)
+
+Program: Write a Python program to create a Student class and Creates an object to it.
+Call the method talk() to display student details
+class Student:
+
+  def __abc__(self,name,rollno,marks):
+    self.name=name
+    self.rollno=rollno
+    self.marks=marks
+
+  def talk(self):
+    print("Hello My Name is:",self.name)
+    print("My Rollno is:",self.rollno)
+    print("My Marks are:",self.marks)
+
+s1=Student("Sai",101,80)
+s1.talk()
+
+Self Variable:
+ self is the default variable which is always pointing to current object (like this keyword
+in Java)
+ By using self we can access instance variables and instance methods of object.
+Note:
+1) self should be first parameter inside constructor
+def __init__(self):
+2) self should be first parameter inside instance methods
+def talk(self):
+Constructor Concept:
+☕ Constructor is a special method in python.
+☕ The name of the constructor should be __init__(self)
+☕ Constructor will be executed automatically at the time of object creation.
+☕ The main purpose of constructor is to declare and initialize instance variables.
+☕ Per object constructor will be exeucted only once.
+☕ Constructor can take atleast one argument(atleast self)
+☕ Constructor is optional and if we are not providing any constructor then python will provide default constructor.
+
+class Student:
+  def __init__(self,x,y,z):
+     self.name=x
+     self.rollno=y
+     self.marks=z
+  def display(self):
+     print("Student Name:{}\nRollno:{}\nMarks:{}".format
+                                           (self.name,self.rollno,self.marks))
+
+s1=Student("Sai",101,80)
+s1.display()
+s2=Student("Honey",102,100)
+s2.display()
+
+
+
+
+
+
+
+
